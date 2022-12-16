@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Créer un utilisateur
+    user:
+      name: nouvelutilisateur
+      state: present
+      shell: /bin/bash
