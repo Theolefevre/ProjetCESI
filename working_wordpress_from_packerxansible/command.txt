@@ -1,0 +1,5 @@
+packer build testazure.pkr.hcl
+
+# run pour 15 minutes
+
+az vm create --resource-group leNomDuGroupe --name workingWordpress --image imageWordpress
