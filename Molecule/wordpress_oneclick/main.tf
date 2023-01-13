@@ -31,7 +31,7 @@ data "azurerm_image" "main" {
 
 
 output "image_id" {
-  value = "/subscriptions/9aeb03df-4f7f-4736-ba74-1f4e02f8b6b0/resourceGroups/example-resources/providers/Microsoft.Compute/images/imageWordpress"
+  value = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/example-resources/providers/Microsoft.Compute/images/imageWordpress"
 }
 
 resource "azurerm_virtual_network" "example" {
