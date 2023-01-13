@@ -1,0 +1,26 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: "Include default"
+      include_role:
+        name: "default"
+    - name: "Include systeme"
+      include_role:
+        name: "systeme"
+    - name: "Include python"
+      include_role:
+        name: "python"
+    - name: "Include apache2"
+      include_role:
+        name: "apache2"
+    - name: "Include mysql"
+      include_role:
+        name: "mysql"
+    - name: "Include ufw"
+      include_role:
+        name: "ufw"
+    - name: "Include wordpress"
+      include_role:
+        name: "wordpress"

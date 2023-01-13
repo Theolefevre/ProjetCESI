@@ -1,0 +1,9 @@
+Molecule : 
+Le processus molecule ci-contre a été effectuer depuis un vagrant dont le VagrantFile est ci-joint dans ce dossier.
+Pour effectuer le test jusqu'au bout, il faut se situer dans le dossier molecule default
+creer une instance docker, et dans cet instance, faire un apt-get update puis un apt install python3.
+Il téléchargera ainsi les premiers packets.
+Pour la suite en php, il vous faudra aller dans le docker et faire : apt install software-common-properties
+Puis, télécharger la librairie php : add-apt-repository ppa:ondrej/php
+Le test s'arrête a la modification des documents dû à l'image Docker Ubuntu qui est différente d'une image Ubuntu classique.
+Pour terminer se test et le faire ressembler le plus possible à la VM, la solution serait d'effectuer les tests sur une VBox similaire à la box d'installation.

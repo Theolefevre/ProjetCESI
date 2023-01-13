@@ -1,0 +1,21 @@
+---
+# tasks file for systeme
+- name: Install apt
+  apt: name=aptitude update_cache=yes state=latest force_apt_get=yes
+  tags: [ system ]
+
+- name: Install needs
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: ['libmysqlclient-dev']
+  tags: [ system ]
+
+- name: Install LAMP Packages
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: [ 'php', 'php-mysql', 'libapache2-mod-php' ]
+  tags: [ system ]
+
+- name: Install PHP Extensions
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: "{{ php_modules }}"
+  tags: [ system ]
+    

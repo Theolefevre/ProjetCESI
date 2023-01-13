@@ -1,0 +1,27 @@
+#########################################################
+# DO Community Playbooks: Wordpress on Ubuntu 18.04 LAMP
+#########################################################
+---
+- hosts: all
+  become: true
+  vars_files:
+    - vars/default.yml
+
+  roles:
+    - systeme
+    - python
+    - mysql
+    - apache2
+    - ufw
+    - wordpress
+
+  handlers:
+    - name: Reload Apache
+      service:
+        name: apache2
+        state: reloaded
+
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
