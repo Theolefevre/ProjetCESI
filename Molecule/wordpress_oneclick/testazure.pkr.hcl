@@ -4,8 +4,8 @@ variable "vmsize" {
 }
 
 source "azure-arm" "imageubuntu" {
-  subscription_id = "e5de38c5-e8ac-452b-9a84-28be57ea419c"
-  tenant_id = "190ce420-b157-44ae-bc2f-69563baa5a3b"
+  subscription_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  tenant_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
   use_azure_cli_auth = true
   managed_image_name = "imageWordpress"
   managed_image_resource_group_name = "groupWordpress"
